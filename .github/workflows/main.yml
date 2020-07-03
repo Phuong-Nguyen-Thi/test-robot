@@ -18,7 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Change permission
-        run: sudo chown -R $USER:$USER ${{ github.workspace }}/reports
+        run: sudo chmod -R 777 ${{ github.workspace }}/reports
       - name: Robot Framework
         uses: joonvena/robotframework-docker-action@v0.1
         env:
